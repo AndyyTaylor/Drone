@@ -1,5 +1,7 @@
 
 import pygame
+import numpy as np
+
 from config import COLORS, ROBOT_DEFAULTS
 
 
@@ -15,8 +17,7 @@ class Robot:
     """
 
     def __init__(self, x: int, y: int, **kwargs):
-        self.x = x
-        self.y = y
+        self.pos = np.array([x, y])
 
         # For linting and type completion
         self.w = 0
@@ -30,13 +31,13 @@ class Robot:
     def update(self, moving_up, moving_down, moving_right, moving_left):
         """ Updates the robot based on moving booleans """
         if moving_up:
-            self.y -= self.speed
+            self.pos[1] -= self.speed
         if moving_down:
-            self.y += self.speed
+            self.pos[1] += self.speed
         if moving_left:
-            self.x -= self.speed
+            self.pos[0] -= self.speed
         if moving_right:
-            self.x += self.speed
+            self.pos[0] += self.speed
 
     def render(self, surface: pygame.Surface):
         """ Render the robot to the given surface """
@@ -46,4 +47,4 @@ class Robot:
     def get_rect(self):
         """ Returns a (x, y, w, h) tuple of the robot's attributes """
 
-        return (self.x, self.y, self.w, self.h)
+        return (self.pos[0], self.pos[1], self.w, self.h)

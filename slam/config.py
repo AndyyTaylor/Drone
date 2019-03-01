@@ -9,6 +9,14 @@ SCREEN_HEIGHT = 800
 class COLORS:
     WHITE = (255, 255, 255)
     BLUE = (0, 0, 255)
+    BLACK = (0, 0, 0)
+    GRAY = (128, 128, 128)
+
+
+class NOISE:
+    class LANDMARK:
+        MOVE_TOGGLE = 0.05
+        STATIC = 0.01
 
 
 ROBOT_DEFAULTS = {
