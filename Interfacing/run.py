@@ -3,6 +3,7 @@
 # Base code written by Tobias Brink - 2017
 # Modified by Henry Veng for BLUESat Drone - April 2019
 # Sauce: http://tbrink.science/blog/2017/04/30/processing-the-output-of-a-subprocess-with-python-in-realtime/
+# Realtime input: https://eli.thegreenplace.net/2017/interacting-with-a-long-running-child-process-in-python/
 #
 # Comments by Mr Brink:
 #   To the extent possible under law, the author(s) have dedicated
