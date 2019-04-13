@@ -1,5 +1,9 @@
 Link interfacing process to subprocesses
     DONE
+Clean up the code and document
+    DONE
 Invalid input handling
 Deal with inputting "l" error
-Clean up the code and document
+Terminate child processes upon completion
+Do proper communication between processes rather than wait 5s
+Change interfacer to arm and takeoff on command rather than automatically

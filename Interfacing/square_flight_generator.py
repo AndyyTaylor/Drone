@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+#
+# Generates velocity vectors once every second to fly a square path
+# Author: Henry Veng
+# Written: April 2019
 
 import time
 import sys
