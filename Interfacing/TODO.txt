@@ -1,2 +1,5 @@
 Link interfacing process to subprocesses
+    DONE
 Invalid input handling
+Deal with inputting "l" error
+Clean up the code and document
