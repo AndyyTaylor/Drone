@@ -21,7 +21,11 @@ for i in range(10):
     time.sleep(1)
 
 for i in range(10):
+    sys.stdout.write("[0,-1,0]\n")
+    time.sleep(1)
+
+for i in range(10):
     sys.stdout.write("0,-1,0\n")
     time.sleep(1)
 
-print("l")
+sys.stdout.write("l")

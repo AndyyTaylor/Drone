@@ -62,7 +62,7 @@ time.sleep(25)
 
 # Start the command generator with psuedo terminal utilities
 out_r, out_w = pty.openpty()
-args = shlex.split("python square_flight_generator.py")
+args = shlex.split("python3 square_flight_generator.py")
 proc = subprocess.Popen(args, stdout=out_w)
 os.close(out_w)
 
@@ -86,3 +86,8 @@ while fds:
         if not readable:
             # This OutStream is finished.
             fds.remove(f)
+
+proc.terminate()
+while(link.poll() == None):
+    time.sleep(0.1)
+link.terminate()

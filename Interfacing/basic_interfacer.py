@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """
@@ -19,6 +19,7 @@ from pymavlink import mavutil # Needed for command message definitions
 import time
 import math
 import sys
+import re
 
 
 #Set up option parsing to get connection string
@@ -122,17 +123,15 @@ while(True):
     cmd = sys.stdin.readline().strip('\n')
     #cmd = raw_input()
 
-    #TODO debug for processor input of l
-    if ((cmd == 'l') or (cmd == 'L')):
+    if ((str(cmd) == 'l') or (str(cmd) == 'L')):
         break
-
-    #TODO input checking
     
     values = cmd.split(",")
     try:
         v = [float(values[0]),float(values[1]),float(values[2])]
-    except ValueError:
-        break
+    except:
+        print("Error; Invalid input!")
+        continue
     send_ned_velocity(v[0],v[1],v[2])
 
 
